@@ -7,6 +7,47 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="0.4*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.4*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
 
+
+        <Border Grid.Row="0" Grid.Column="0">
+            <!-- Ваше содержимое -->
+            <ListBox x:Name="myListBox" 
+         ItemsSource="{Binding}"
+         Margin="5"
+         SelectionChanged="myListBox_SelectionChanged"/>
+        </Border>
+
+        <!-- Верхняя правая ячейка -->
+        <Border Grid.Row="0" Grid.Column="1">
+            <!-- Ваше содержимое -->
+            <DataGrid Margin="5"
+                     AutoGenerateColumns="True"
+                    x:Name="dataGrid1"
+                      SelectionChanged="dataGrid1_SelectionChanged">
+
+            </DataGrid>
+
+        </Border>
+
+        <!-- Нижняя ячейка -->
+        <Border Grid.Row="1" Grid.ColumnSpan="2">
+            <!-- Ваше содержимое -->
+            <StackPanel Margin="10">
+
+                <StackPanel Orientation="Horizontal" Margin="10">
+                    <Button x:Name="btnCreate" Width="100" Margin="5,0" Content=" Режим покупки" Click="btnCreate_Click"/>
+                    <Button x:Name="btnUpdate" Width="100" Margin="5,0" Content=" Добавить" Click="btnUpdate_Click"/>
+
+                </StackPanel>
+            </StackPanel>
+        </Border>
     </Grid>
 </Window>
