@@ -44,5 +44,10 @@ namespace wpu221_team_work
         {
 
         }
+
+        private void btnDelete_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

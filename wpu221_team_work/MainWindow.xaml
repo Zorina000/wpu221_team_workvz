@@ -45,6 +45,7 @@
                 <StackPanel Orientation="Horizontal" Margin="10">
                     <Button x:Name="btnCreate" Width="100" Margin="5,0" Content=" Режим покупки" Click="btnCreate_Click"/>
                     <Button x:Name="btnUpdate" Width="100" Margin="5,0" Content=" Добавить" Click="btnUpdate_Click"/>
+                    <Button x:Name="btnDelete" Width="100" Margin="5,0" Content=" Удалить" Click="btnDelete_Click"/>
 
                 </StackPanel>
             </StackPanel>
